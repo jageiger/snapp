@@ -1,0 +1,18 @@
+<h2>Events</h2>
+
+<table class="table table-bordered">
+	<tr>
+		<th>Title</th>
+		<th>Date</th>
+		<th>Location</th>
+		
+	</tr>
+	<% @events.each do |event| %>
+		<tr>
+			<td><%= link_to(event.title, event_path(event) ) %></td>
+			<td><%= event.date %></td>
+			<td><%= event.location %></td>
+		</tr>
+		<% end %>
+	</table>
+	
